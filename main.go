@@ -2,8 +2,11 @@ package main
 
 import (
 	"fmt"
+	"github.com/takenakasuji/go-interface-sample/service"
 )
 
 func main() {
-	fmt.Println("test")
+	s := service.NewConcatService("aaa", "bbb")
+	r := s.DoSomething()
+	fmt.Println(r)
 }
